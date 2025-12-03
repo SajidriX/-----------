@@ -68,17 +68,20 @@ else:
         
         if instrument == "секундомер":
             print("\nДля расстояния:")
-            kind = int(input("Введите тип линейки (1 - ученическая, 2 - чертёжная, 3 - инструментальная, 4 - демонстрационная, 5 - измерительная): "))
-            if kind == 1:
-                s_main2 = 0.015
-            elif kind == 2:
-                s_main2 = 0.007
-            elif kind == 3:
-                s_main2 = 0.006
-            elif kind == 4:
-                s_main2 = 0.005
-            elif kind == 5:
-                s_main2 = 0.075
+            try:
+                kind = int(input("Введите тип линейки (1 - ученическая, 2 - чертёжная, 3 - инструментальная, 4 - демонстрационная, 5 - измерительная): "))
+                if kind == 1:
+                    s_main2 = 0.015
+                elif kind == 2:
+                    s_main2 = 0.007
+                elif kind == 3:
+                    s_main2 = 0.006
+                elif kind == 4:
+                    s_main2 = 0.005
+                elif kind == 5:
+                    s_main2 = 0.075
+            except ValueError:
+                print("Вы ввели неверное значение(вводите числа)")
         
         sum_abs_diff2 = 0.0
         for i in second:
